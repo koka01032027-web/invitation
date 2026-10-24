@@ -1,0 +1,22 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; width: 512px; height: 512px; background: transparent; overflow: hidden; }
+  .seal {
+    position: absolute; inset: 6px;
+    background: url(../assets/seal.svg) center / contain no-repeat;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding-top: 92px; box-sizing: border-box;
+    color: #5b4636; text-align: center;
+  }
+  .names { font-family: "Great Vibes", cursive; font-size: 60px; line-height: .95; }
+  .amp { display: block; font-size: .6em; color: #b8914f; line-height: 1.1; }
+  .date { font: 600 22px "Cormorant SC", serif; letter-spacing: .14em; margin-top: 12px; }
+</style></head>
+<body>
+  <div class="seal">
+    <div class="names">{{BRIDE}}<span class="amp">&amp;</span>{{GROOM}}</div>
+    <div class="date">{{MAIN_DATE}}</div>
+  </div>
+</body></html>

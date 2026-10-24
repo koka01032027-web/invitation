@@ -1,0 +1,40 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Cormorant+SC:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body { background: #7a8456 url(../assets/leaves.svg); color: #5b4636; font-family: "Cormorant Garamond", serif; text-align: center; position: relative; }
+  .ribbon { position: absolute; top: 0; bottom: 0; left: 589px; width: 22px;
+            background: linear-gradient(90deg, #8f6f3c, #d8b97f 30%, #f1dcae 50%, #d8b97f 70%, #8f6f3c); box-shadow: 0 0 10px rgba(0,0,0,.25); }
+  .card { position: absolute; left: 220px; top: 36px; width: 760px; height: 450px; background: radial-gradient(ellipse at 50% 35%, #fffbf3, #f5eedf 75%);
+          border-radius: 6px; box-shadow: 0 18px 40px rgba(30,36,18,.4); overflow: hidden; }
+  .garden { position: absolute; left: 0; right: 0; bottom: 0; height: 230px; background: url(../assets/garden.jpg) 50% 52% / cover;
+            -webkit-mask-image: linear-gradient(to bottom, transparent, #000 55%); }
+  .card::after { content: ""; position: absolute; inset: 12px; border: 1.5px solid rgba(201,166,107,.7); border-radius: 3px; pointer-events: none; }
+  .drape { position: absolute; top: 0; left: 0; width: 150px; z-index: 2; }
+  .drape.r { left: auto; right: 0; transform: scaleX(-1); }
+  .text { position: relative; z-index: 1; }
+  .heart { width: 24px; margin-top: 38px; color: #c9a66b; }
+  .kicker { font-size: 25px; margin: 0; letter-spacing: .03em; }
+  .names { font-family: "Great Vibes", cursive; font-size: 100px; line-height: 1.12; margin: 2px 0 0; }
+  .names .amp { color: #c9a66b; font-size: .62em; vertical-align: .18em; padding: 0 .22em 0 .16em; }
+  .date { font: 600 28px "Cormorant SC", serif; letter-spacing: .12em; margin-top: 2px; }
+  .seal { position: absolute; left: 510px; top: 430px; width: 180px; height: 180px; background: url(../assets/seal.svg) center/contain no-repeat;
+          display: grid; place-items: center; padding-top: 26px; box-sizing: border-box;
+          font: 600 17px/1.35 "Cormorant SC", serif; letter-spacing: .16em; filter: drop-shadow(0 10px 14px rgba(30,36,18,.45)); }
+</style></head>
+<body>
+  <div class="ribbon"></div>
+  <div class="card">
+    <div class="garden"></div>
+    <img class="drape" src="../assets/drape.webp" alt="">
+    <img class="drape r" src="../assets/drape.webp" alt="">
+    <div class="text">
+      <svg class="heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20.5s-7.5-4.6-7.5-10.4A4.3 4.3 0 0 1 12 7.4a4.3 4.3 0 0 1 7.5 2.7c0 5.8-7.5 10.4-7.5 10.4z"/></svg>
+      <p class="kicker">We’re getting married</p>
+      <div class="names">{{BRIDE}}<span class="amp">&amp;</span>{{GROOM}}</div>
+      <div class="date">{{MAIN_WHEN}}</div>
+    </div>
+  </div>
+  <div class="seal">Tap to view<br>invitation</div>
+</body></html>
